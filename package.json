@@ -24,8 +24,19 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "^1.18.2",
+    "@babel/core": "^7.5.5",
+    "@storybook/addon-actions": "^5.1.10",
+    "@storybook/addon-console": "^1.2.1",
+    "@storybook/addon-info": "^5.1.10",
+    "@storybook/addon-knobs": "^5.1.10",
+    "@storybook/addon-links": "^5.1.10",
+    "@storybook/addon-storysource": "^5.1.10",
+    "@storybook/addon-viewport": "^5.1.10",
+    "@storybook/addons": "^5.1.10",
+    "@storybook/cli": "^5.1.10",
+    "@storybook/react": "^5.1.10",
     "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
     "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-config-standard": "^13.0.1",
@@ -36,7 +47,9 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "prettier": "^1.18.2",
+    "react-docgen-typescript-loader": "^3.1.0"
   },
   "keywords": [
     "gatsby"
@@ -48,7 +61,9 @@
     "format": "prettier --write src/**/*.{js,ts,jsx,tsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
