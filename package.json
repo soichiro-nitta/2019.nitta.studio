@@ -1,9 +1,19 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "nitta-studio-2019",
+  "description": "",
+  "version": "1.0.0",
+  "author": "Soichiro Nitta",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,ts,jsx,tsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "storybook": "NODE_ENV=production start-storybook -s static",
+    "build-storybook": "NODE_ENV=production build-storybook -s static",
+    "deploy-storybook": "gh-pages -d storybook-static"
+  },
   "dependencies": {
     "@emotion/core": "^10.0.15",
     "@emotion/styled": "^10.0.15",
@@ -52,28 +62,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-standard": "^4.0.0",
+    "gh-pages": "^2.1.1",
     "prettier": "^1.18.2",
-    "react-docgen-typescript-loader": "^3.1.0"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,ts,jsx,tsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "react-docgen-typescript-loader": "^3.1.1"
   }
 }
