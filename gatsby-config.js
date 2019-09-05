@@ -39,16 +39,10 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Spectral`
-          },
-          {
-            family: `Noto Serif JP`
-          }
-        ]
+        fonts: [`Spectral`, `Noto Serif JP\:600,900`],
+        display: 'swap'
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
