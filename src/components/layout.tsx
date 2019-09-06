@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
-import './layout.css'
+import '../assets/scss/default'
 
 interface LayoutProps {
   children: React.ReactNode
