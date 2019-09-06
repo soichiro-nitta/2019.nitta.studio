@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Spectral`, `Noto Serif JP\:600,900`],
+        fonts: [`Spectral\:600,800`, `Noto Serif JP\:600,900`],
         display: 'swap'
       }
     }
