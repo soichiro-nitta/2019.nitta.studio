@@ -10,8 +10,9 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    'gatsby-plugin-emotion',
-    'gatsby-plugin-typescript',
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
