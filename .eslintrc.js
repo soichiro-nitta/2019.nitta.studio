@@ -1,20 +1,21 @@
 module.exports = {
-  root: true,
   env: {
-    browser: true,
+    es6: true,
     node: true
   },
   parser: 'babel-eslint',
   parserOptions: {
-    "ecmaFeatures": {
-      "jsx": true
+    version: 2018,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
     }
   },
   extends: [
-    "plugin:react/recommended",
+    'eslint:recommended',
+    'plugin:react/recommended',
     'plugin:prettier/recommended',
-    'prettier',
-    "prettier/react"
+    'prettier/react'
   ],
   plugins: [
     'react',
@@ -22,7 +23,6 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'prettier/prettier': 'error'
   }
 }
