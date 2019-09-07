@@ -3,9 +3,9 @@ import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 // import { css } from '@emotion/core'
 
-import Layout from '../layouts/default'
-import Image from '../components/image'
-import SEO from '../components/seo'
+import Layout from '~/layouts/default'
+import Image from '~/components/image'
+import SEO from '~/components/seo'
 
 const IndexPage = () => (
   <Layout>
