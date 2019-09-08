@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import Header from '~/components/Header'
@@ -43,9 +42,5 @@ const Footer = styled.div`
   margin-top: 20px;
   /* color: #444; */
 `
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
-}
 
 export default Layout
