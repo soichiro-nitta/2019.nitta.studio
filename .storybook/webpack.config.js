@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = ({ config }) => {
   // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
   config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
@@ -27,6 +29,28 @@ module.exports = ({ config }) => {
     options: {
       presets: [['react-app', { flow: false, typescript: true }]],
     },
+  });
+  config.module.rules.push({
+    test: /\.s[ac]ss$/,
+    loaders: [
+      "style-loader",
+      "css-loader",
+      "sass-loader",
+      ],
+    exclude: /\.module\.s[ac]ss$/,
+    include: path.resolve(__dirname, '../src')
+  })
+  config.module.rules.push({
+    test: /\.(ts|tsx)$/,
+    use: [
+      {
+        loader: require.resolve("react-docgen-typescript-loader")
+      },
+      {
+        loader: require.resolve('@storybook/addon-storysource/loader'),
+        options: { parser: 'typescript' }
+      }
+    ]
   });
   config.resolve.extensions.push('.ts', '.tsx');
 

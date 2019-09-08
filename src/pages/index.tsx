@@ -4,7 +4,7 @@ import React from 'react'
 
 import Layout from '~/layouts/default'
 // import Image from '~/components/Image'
-import SEO from '~/components/Base/Seo'
+import SEO from '~/components/base/Seo'
 
 const IndexPage = () => (
   <Layout>

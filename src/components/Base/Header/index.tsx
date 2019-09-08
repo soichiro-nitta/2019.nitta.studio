@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 
-interface Props {
+export interface Props {
   siteTitle: string
 }
 
@@ -13,11 +13,8 @@ const Header = (props: Props) => (
 )
 
 const Root = styled.h1`
-  display: inline-block;
-  position: fixed;
-  top: 30px;
-  left: 30px;
   font-size: 30px;
+  font-weight: bold;
   line-height: 1;
 `
 

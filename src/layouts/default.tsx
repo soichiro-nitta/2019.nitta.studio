@@ -1,7 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
-import Header from '~/components/Base/Header'
+import Header from '~/components/base/Header'
+import Example from '~/components/Example'
 import '~/assets/scss/variables.scss'
 import '~/assets/scss/default.scss'
 
@@ -21,7 +22,14 @@ const Layout = (props: Props) => {
   `)
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <HeaderWrapper>
+        <Header siteTitle={data.site.siteMetadata.title} />
+      </HeaderWrapper>
+      <Example
+        text="Exampleのテキスト"
+        flag={true}
+        action={() => console.log('this is log')}
+      />
       <Main>
         <div>{props.children}</div>
         はじめまして新田聡一郎です。
@@ -33,6 +41,11 @@ const Layout = (props: Props) => {
   )
 }
 
+const HeaderWrapper = styled.div`
+  position: fixed;
+  top: 30px;
+  left: 30px;
+`
 const Main = styled.div`
   margin-top: 80px;
   margin-left: 30px;

@@ -1,6 +1,16 @@
-import { configure } from "@storybook/react"
+import { addParameters, configure } from "@storybook/react"
+import { themes } from '@storybook/theming';
 import { action } from "@storybook/addon-actions"
 import { setConsoleOptions } from '@storybook/addon-console';
+import '../src/assets/scss/variables.scss'
+import '../src/assets/scss/mixins.scss'
+import '../src/assets/scss/storybook.scss'
+
+addParameters({
+  options: {
+    theme: themes.dark,
+  },
+});
 
 setConsoleOptions({
   panelExclude: []
