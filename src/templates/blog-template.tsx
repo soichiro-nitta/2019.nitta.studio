@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import SEO from '../components/seo'
+import SEO from '~/components/Base/Seo'
 
 const BlogTemplate = ({ data }: any) => {
   console.log(data)

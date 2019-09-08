@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 // import styled from '@emotion/styled'
 
 import Layout from '~/layouts/default'
 // import Image from '~/components/Image'
-import SEO from '~/components/seo'
+import SEO from '~/components/Base/Seo'
 
 const IndexPage = () => (
   <Layout>
