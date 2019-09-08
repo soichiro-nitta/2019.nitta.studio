@@ -37,7 +37,6 @@ const Main = styled.div`
   margin-top: 80px;
   margin-left: 30px;
 `
-
 const Footer = styled.div`
   margin-top: 20px;
   /* color: #444; */

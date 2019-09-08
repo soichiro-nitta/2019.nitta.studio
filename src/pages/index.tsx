@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 // import styled from '@emotion/styled'
 
 import Layout from '~/layouts/default'
-// import Image from '~/components/image'
+// import Image from '~/components/Image'
 import SEO from '~/components/seo'
 
 const IndexPage = () => (
