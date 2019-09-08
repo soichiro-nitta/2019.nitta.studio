@@ -1,22 +1,22 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback } from 'react'
 
 export interface ExampleProps {
   /** 表示するテキスト */
-  text: string;
+  text: string
   /**
    * true: テキスト表示 false: テキスト非表示
    * @default false
    */
-  flag?: boolean;
+  flag?: boolean
   /** ボタンを押した時のイベントハンドラ */
-  action(): void;
+  action(): void
 }
 
 const Example = (props: ExampleProps) => {
-  const { text, flag, action } = props;
-  const [count, countChg] = useState(0);
-  const countUp = useCallback(() => countChg(prev => prev + 1), []);
-  const countDown = useCallback(() => countChg(prev => prev - 1), []);
+  const { text, flag, action } = props
+  const [count, countChg] = useState(0)
+  const countUp = useCallback(() => countChg(prev => prev + 1), [])
+  const countDown = useCallback(() => countChg(prev => prev - 1), [])
 
   return (
     <div>
@@ -26,7 +26,7 @@ const Example = (props: ExampleProps) => {
       <button onClick={countUp}>+</button>
       <button onClick={countDown}>-</button>
     </div>
-  );
-};
+  )
+}
 
-export default Example;
+export default Example

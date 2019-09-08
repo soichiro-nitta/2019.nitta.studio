@@ -1,23 +1,16 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
-
+import styled from '@emotion/styled'
 import Header from '~/components/header'
 import '~/assets/scss/variables.scss'
 import '~/assets/scss/default.scss'
 
-interface LayoutProps {
+interface Props {
   children: React.ReactNode
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = (props: Props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,28 +20,29 @@ const Layout = ({ children }: LayoutProps) => {
       }
     }
   `)
-
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <Main>
+        <div>{props.children}</div>
+        はじめまして新田聡一郎です。
+        <Footer>
+          © {new Date().getFullYear()}, Produced by Soichiro Nitta
+        </Footer>
+      </Main>
     </>
   )
 }
+
+const Main = styled.div`
+  margin-top: 80px;
+  margin-left: 30px;
+`
+
+const Footer = styled.div`
+  margin-top: 20px;
+  /* color: #444; */
+`
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
