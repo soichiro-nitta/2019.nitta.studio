@@ -19,22 +19,17 @@ const Border1 = styled.div`
   top: 75px;
   left: 50px;
   width: 1px;
-  height: 100%;
+  height: calc(100% - 100px);
   background: #e5e5e5;
 `
 const Border2 = styled(Border1)`
   position: absolute;
-  top: 0;
   left: calc((100% - 102px) / 3 + 51px);
 `
 const Border3 = styled(Border1)`
-  height: 100%;
-  top: 0;
   left: calc((100% - 102px) / 3 * 2 + 51px);
 `
 const Border4 = styled(Border1)`
-  height: 100%;
-  top: 0;
   left: auto;
   right: 50px;
 `
