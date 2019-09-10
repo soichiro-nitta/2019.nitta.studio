@@ -1,7 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const path = require('path')
+const resolve = require('path').resolve
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -26,7 +24,7 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
-        component: path.resolve(`src/templates/blog-template.tsx`),
+        component: resolve(`src/templates/blog-template.tsx`),
         context: {
           path: node.frontmatter.path
         }
@@ -35,12 +33,11 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        '~': path.resolve(__dirname, 'src')
+        '@': resolve(__dirname, 'src')
       }
     }
   })
