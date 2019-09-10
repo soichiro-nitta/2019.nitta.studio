@@ -27,6 +27,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    'prettier/prettier': 'error'
+    'prettier/prettier': 'error',
+    "react/prop-types": 0
   }
 }
