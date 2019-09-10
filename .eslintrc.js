@@ -28,6 +28,10 @@ module.exports = {
   // add your custom rules here
   rules: {
     'prettier/prettier': 'error',
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "react/self-closing-comp": ["error", {
+      "component": true,
+      "html": true
+    }]
   }
 }
