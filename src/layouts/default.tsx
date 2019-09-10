@@ -1,8 +1,8 @@
-import React from 'react'
+import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import Header from '~/components/base/Header'
-import Example from '~/components/Example'
+// import Example from '~/components/Example'
 import '~/assets/scss/variables.scss'
 import '~/assets/scss/default.scss'
 
@@ -10,7 +10,7 @@ interface Props {
   children: React.ReactNode
 }
 
-const Layout = (props: Props) => {
+const Layout: React.FC = (props: Props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -20,16 +20,15 @@ const Layout = (props: Props) => {
       }
     }
   `)
+  // const text = 'aaa'
+  // const flag = true
+  // const action = (): void => console.log('this is log')
   return (
     <>
       <HeaderWrapper>
         <Header siteTitle={data.site.siteMetadata.title} />
       </HeaderWrapper>
-      <Example
-        text="Exampleのテキスト"
-        flag={true}
-        action={() => console.log('this is log')}
-      />
+      {/* <Example text={text} flag={flag} action={action} /> */}
       <Main>
         <div>{props.children}</div>
         はじめまして新田聡一郎です。

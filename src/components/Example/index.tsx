@@ -1,6 +1,6 @@
-import React, { useState, useCallback } from 'react'
+import * as React from 'react'
 
-export interface ExampleProps {
+interface ExampleProps {
   /** 表示するテキスト */
   text: string
   /**
@@ -12,11 +12,11 @@ export interface ExampleProps {
   action(): void
 }
 
-const Example = (props: ExampleProps) => {
+const Example: React.ReactNode = (props: ExampleProps) => {
   const { text, flag, action } = props
-  const [count, countChg] = useState(0)
-  const countUp = useCallback(() => countChg(prev => prev + 1), [])
-  const countDown = useCallback(() => countChg(prev => prev - 1), [])
+  const [count, countChg] = React.useState(0)
+  const countUp = React.useCallback(() => countChg(prev => prev + 1), [])
+  const countDown = React.useCallback(() => countChg(prev => prev - 1), [])
 
   return (
     <div>

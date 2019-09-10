@@ -1,12 +1,12 @@
-import React from 'react'
+import * as React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 
-export interface Props {
+type Props = {
   siteTitle: string
 }
 
-const Header = (props: Props) => (
+const Header: React.FC = (props: Props) => (
   <Root>
     <Link to="/">{props.siteTitle}</Link>
   </Root>
