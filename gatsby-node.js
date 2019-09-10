@@ -1,5 +1,7 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path')
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -33,6 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
