@@ -12,7 +12,7 @@ interface ExampleProps {
   action(): void
 }
 
-const Example: React.ReactNode = (props: ExampleProps) => {
+const Example: React.FC<ExampleProps> = props => {
   const { text, flag, action } = props
   const [count, countChg] = React.useState(0)
   const countUp = React.useCallback(() => countChg(prev => prev + 1), [])
