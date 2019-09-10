@@ -33,13 +33,7 @@ const Layout: React.FC = props => {
         <Background />
       </BackgroundWrapper>
       {/* <Example text={text} flag={flag} action={action} /> */}
-      <Main>
-        はじめまして新田聡一郎です。
-        <div>{props.children}</div>
-        <Footer>
-          © {new Date().getFullYear()}, Produced by Soichiro Nitta
-        </Footer>
-      </Main>
+      <Main>{/* <div>{props.children}</div> */}</Main>
     </>
   )
 }
@@ -61,10 +55,16 @@ const BackgroundWrapper = styled.div`
 const Main = styled.div`
   padding-top: 80px;
   padding-left: 70px;
-  font-size: 14px;
+  position: relative;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   z-index: 0;
+  font-size: 14px;
 `
 const Footer = styled.div`
   margin-top: 20px;

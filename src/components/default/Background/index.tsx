@@ -7,6 +7,8 @@ const Background: React.FC = () => (
     <Border2 />
     <Border3 />
     <Border4 />
+    <Border5 />
+    <Border6 />
   </Root>
 )
 
@@ -16,22 +18,36 @@ const Root = styled.h1`
 `
 const Border1 = styled.div`
   position: absolute;
-  top: 75px;
+  top: 0;
   left: 50px;
   width: 1px;
-  height: calc(100% - 100px);
+  height: 15px;
   background: #e5e5e5;
 `
 const Border2 = styled(Border1)`
-  position: absolute;
-  left: calc((100% - 102px) / 3 + 51px);
+  top: 75px;
+  height: calc(100% - 75px);
 `
 const Border3 = styled(Border1)`
-  left: calc((100% - 102px) / 3 * 2 + 51px);
+  top: 0;
+  left: calc((100% - 102px) / 3 + 51px);
+  height: 22px;
 `
 const Border4 = styled(Border1)`
+  top: 75px;
+  left: calc((100% - 102px) / 3 + 51px);
+  height: calc(100% - 75px);
+`
+const Border5 = styled(Border1)`
+  top: 0;
+  left: calc((100% - 102px) / 3 * 2 + 51px);
+  height: 100%;
+`
+const Border6 = styled(Border1)`
+  top: 0;
   left: auto;
   right: 50px;
+  height: 100%;
 `
 
 export default Background
