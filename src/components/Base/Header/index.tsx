@@ -6,7 +6,7 @@ type Props = {
   siteTitle: string
 }
 
-const Header: React.FC = (props: Props) => (
+const Header: React.FC<Props> = props => (
   <Root>
     <Link to="/">{props.siteTitle}</Link>
   </Root>

@@ -6,11 +6,11 @@ import Header from '~/components/base/Header'
 import '~/assets/scss/variables.scss'
 import '~/assets/scss/default.scss'
 
-interface Props {
+type Props = {
   children: React.ReactNode
 }
 
-const Layout: React.FC = (props: Props) => {
+const Layout: React.FC<Props> = props => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -20,6 +20,9 @@ const Layout: React.FC = (props: Props) => {
       }
     }
   `)
+  const test = () => {
+    console.log("test")
+  }
   // const text = 'aaa'
   // const flag = true
   // const action = (): void => console.log('this is log')
