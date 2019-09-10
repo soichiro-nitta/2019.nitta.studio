@@ -9,6 +9,7 @@ import SEO from '~/components/base/Seo'
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    はじめまして新田聡一郎です。
     <ImageWrapper>
       <Image />
     </ImageWrapper>
