@@ -29,7 +29,7 @@ const Layout: React.FC = props => {
       <DashboardWrapper>
         <Dashboard />
       </DashboardWrapper>
-      <Main>
+      <Main id="main">
         {props.children}
         <Footer>
           © {new Date().getFullYear()}, Produced by Soichiro Nitta
@@ -54,17 +54,18 @@ const BackgroundWrapper = styled.div`
 const HeaderWrapper = styled.div`
   position: fixed;
   top: 20px;
-  left: 20px;
+  left: 22.5px;
   z-index: 1;
 `
 const DashboardWrapper = styled.div`
   position: fixed;
-  top: 83px;
+  top: 89px;
+  left: 25px;
   z-index: 1;
 `
 const Main = styled.div`
   position: relative;
-  padding: 80px 25px 0 85px;
+  padding: 86px 23.5px 0 89.5px;
   width: 100%;
   height: 100%;
   font-size: 14px;
