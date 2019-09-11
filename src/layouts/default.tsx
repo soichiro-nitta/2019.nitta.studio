@@ -59,12 +59,12 @@ const HeaderWrapper = styled.div`
 `
 const DashboardWrapper = styled.div`
   position: fixed;
-  top: 80px;
+  top: 83px;
   z-index: 1;
 `
 const Main = styled.div`
   position: relative;
-  padding: 77px 25px 0 85px;
+  padding: 80px 25px 0 85px;
   width: 100%;
   height: 100%;
   font-size: 14px;

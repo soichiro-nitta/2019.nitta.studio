@@ -26,7 +26,7 @@ const Root = styled.div`
 `
 const Icon = styled.div`
   :not(:first-child) {
-    margin-top: 42px;
+    margin-top: 45px;
   }
   width: 100%;
   height: 16px;
