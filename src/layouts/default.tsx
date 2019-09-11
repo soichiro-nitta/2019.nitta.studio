@@ -45,7 +45,7 @@ const Root = styled(Div100vh)`
   width: 100%;
   height: 100%;
 `
-const BackgroundWrapper = styled.div`
+const BackgroundWrapper = styled(Div100vh)`
   position: fixed;
   top: 0;
   left: 0;
@@ -67,7 +67,6 @@ const DashboardWrapper = styled.div`
 `
 const Main = styled(Div100vh)`
   padding: 86px 23.5px 0 89.5px;
-  position: fixed;
   width: 100%;
   height: 100%;
   font-size: 14px;
