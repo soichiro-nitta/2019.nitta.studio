@@ -21,8 +21,9 @@ const Dashboard: React.FC = () => (
   </Root>
 )
 
+const size = 32
 const Root = styled.div`
-  width: 50px;
+  width: ${size * 2 + 1}px;
   height: calc(100% - 90px);
 `
 const Icon = styled.div`

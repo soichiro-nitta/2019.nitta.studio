@@ -12,6 +12,7 @@ const Background: React.FC = () => (
   </Root>
 )
 
+const size = 32
 const Root = styled.h1`
   width: 100%;
   height: 100%;
@@ -19,34 +20,34 @@ const Root = styled.h1`
 const Border1 = styled.div`
   position: absolute;
   top: 0;
-  left: 50px;
+  left: ${size}px;
   width: 1px;
-  height: 15px;
+  height: 8px;
   background: #e5e5e5;
 `
 const Border2 = styled(Border1)`
-  top: 75px;
+  top: 63px;
   height: calc(100% - 75px);
 `
 const Border3 = styled(Border1)`
   top: 0;
-  left: calc((100% - 102px) / 3 + 51px);
-  height: 22px;
+  left: calc((100% - ${size * 2 + 2}px) / 3 + ${size + 1}px);
+  height: 15px;
 `
 const Border4 = styled(Border1)`
-  top: 75px;
-  left: calc((100% - 102px) / 3 + 51px);
+  top: 63px;
+  left: calc((100% - ${size * 2 + 2}px) / 3 + ${size + 1}px);
   height: calc(100% - 75px);
 `
 const Border5 = styled(Border1)`
   top: 0;
-  left: calc((100% - 102px) / 3 * 2 + 51px);
+  left: calc((100% - ${size * 2 + 2}px) / 3 * 2 + ${size + 1}px);
   height: 100%;
 `
 const Border6 = styled(Border1)`
   top: 0;
   left: auto;
-  right: 50px;
+  right: ${size}px;
   height: 100%;
 `
 
