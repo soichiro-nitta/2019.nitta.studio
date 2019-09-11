@@ -26,7 +26,7 @@ const Root = styled.div`
 `
 const Icon = styled.div`
   :not(:first-child) {
-    margin-top: 30px;
+    margin-top: 42px;
   }
   width: 100%;
   height: 16px;
@@ -34,6 +34,7 @@ const Icon = styled.div`
   overflow: hidden;
   svg {
     font-size: 16px;
+    height: 16px;
     vertical-align: top;
   }
 `
