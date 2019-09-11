@@ -25,16 +25,16 @@ const Root = styled.h1`
 `
 const Scrollbar = styled.div`
   position: absolute;
-  left: 20px;
+  left: 23.5px;
   bottom: 31.5px;
-  width: 25px;
+  width: 18px;
   height: 2px;
   background: #555;
-  transform: scalex(0);
+  transform: scaleX(0);
   transform-origin: left center;
 `
 const ScrollbarBackground = styled(Scrollbar)`
-  background: #bababa;
+  background: #b5b5b5;
   transform: none;
 `
 
