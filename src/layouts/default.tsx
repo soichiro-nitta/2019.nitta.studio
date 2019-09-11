@@ -8,6 +8,16 @@ import '~/assets/scss/variables.scss'
 import '~/assets/scss/default.scss'
 import '~/components/default/Background'
 
+import * as Fontawesome from '@fortawesome/fontawesome-svg-core'
+import {
+  faDesktop,
+  faHomeLgAlt,
+  faSmileWink
+} from '@fortawesome/pro-regular-svg-icons'
+Fontawesome.library.add(faDesktop, faHomeLgAlt, faSmileWink)
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+const icon: Fontawesome.IconLookup = { prefix: 'far', iconName: 'desktop' }
+
 const Layout: React.FC = props => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -34,6 +44,7 @@ const Layout: React.FC = props => {
       </BackgroundWrapper>
       {/* <Example text={text} flag={flag} action={action} /> */}
       <Main>
+        <FontAwesomeIcon icon={icon} />
         {props.children}
         <Footer>
           © {new Date().getFullYear()}, Produced by Soichiro Nitta
