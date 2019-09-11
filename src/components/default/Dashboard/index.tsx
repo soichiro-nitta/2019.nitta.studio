@@ -10,10 +10,10 @@ import {
 const Dashboard: React.FC = () => (
   <Root>
     <Icon>
-      <FontAwesomeIcon icon={faDesktop} />
+      <FontAwesomeIcon icon={faHomeLgAlt} />
     </Icon>
     <Icon>
-      <FontAwesomeIcon icon={faHomeLgAlt} />
+      <FontAwesomeIcon icon={faDesktop} />
     </Icon>
     <Icon>
       <FontAwesomeIcon icon={faSmileWink} />
@@ -21,20 +21,20 @@ const Dashboard: React.FC = () => (
   </Root>
 )
 
-const size = 32
 const Root = styled.div`
-  width: ${size * 2 + 1}px;
-  height: calc(100% - 90px);
+  margin-left: 25px;
 `
 const Icon = styled.div`
   :not(:first-child) {
     margin-top: 30px;
   }
   width: 100%;
+  height: 16px;
   text-align: center;
   overflow: hidden;
   svg {
-    font-size: 15px;
+    font-size: 16px;
+    vertical-align: top;
   }
 `
 
