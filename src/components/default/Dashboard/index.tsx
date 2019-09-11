@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -9,13 +10,13 @@ import {
 
 const Dashboard: React.FC = () => (
   <Root>
-    <Icon>
+    <Icon to="/">
       <FontAwesomeIcon icon={faHomeLgAlt} />
     </Icon>
-    <Icon>
+    <Icon to="/page-2">
       <FontAwesomeIcon icon={faDesktop} />
     </Icon>
-    <Icon>
+    <Icon to="/">
       <FontAwesomeIcon icon={faSmileWink} />
     </Icon>
   </Root>
@@ -24,7 +25,8 @@ const Dashboard: React.FC = () => (
 const Root = styled.div`
   margin-left: 25px;
 `
-const Icon = styled.div`
+const Icon = styled(Link)`
+  display: block;
   :not(:first-child) {
     margin-top: 45px;
   }
