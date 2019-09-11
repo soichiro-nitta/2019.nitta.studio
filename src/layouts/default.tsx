@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
-import Div100vh from 'react-div-100vh'
 import Header from '~/components/default/Header'
 import Background from '~/components/default/Background'
 import Dashboard from '~/components/default/Dashboard'
@@ -40,12 +39,12 @@ const Layout: React.FC = props => {
   )
 }
 
-const Root = styled(Div100vh)`
+const Root = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
 `
-const BackgroundWrapper = styled(Div100vh)`
+const BackgroundWrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -65,7 +64,7 @@ const DashboardWrapper = styled.div`
   left: 25px;
   z-index: 1;
 `
-const Main = styled(Div100vh)`
+const Main = styled.div`
   padding: 86px 23.5px 0 89.5px;
   width: 100%;
   height: 100%;
