@@ -1,27 +1,16 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 
-const Background: React.FC = () => {
-  const border7 = React.useRef(null)
-  React.useEffect(() => {
-    const main = document.getElementById('main')
-    const scrollMax = main.scrollHeight - main.clientHeight
-    main.addEventListener('scroll', () => {
-      border7.current.style.transform = `scaleY(${main.scrollTop / scrollMax})`
-    })
-  })
-  return (
-    <Root>
-      <Border1 />
-      <Border2 />
-      <Border3 />
-      <Border4 />
-      <Border5 />
-      <Border6 />
-      <Border7 ref={border7} />
-    </Root>
-  )
-}
+const Background: React.FC = () => (
+  <Root>
+    <Border1 />
+    <Border2 />
+    <Border3 />
+    <Border4 />
+    <Border5 />
+    <Border6 />
+  </Root>
+)
 
 const size = 65
 const Root = styled.h1`
@@ -60,14 +49,6 @@ const Border6 = styled(Border1)`
   left: auto;
   right: ${size}px;
   height: 100%;
-`
-const Border7 = styled(Border1)`
-  top: 0;
-  left: ${size}px;
-  height: 100%;
-  background: #b5b5b5;
-  transform: scaleY(0);
-  transform-origin: top center;
 `
 
 export default Background

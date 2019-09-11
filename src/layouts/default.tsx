@@ -1,9 +1,11 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
+import Div100vh from 'react-div-100vh'
 import Header from '~/components/default/Header'
 import Background from '~/components/default/Background'
 import Dashboard from '~/components/default/Dashboard'
+import Statusbar from '~/components/default/Statusbar'
 import '~/assets/scss/variables.scss'
 import '~/assets/scss/default.scss'
 import '~/components/default/Background'
@@ -29,6 +31,9 @@ const Layout: React.FC = props => {
       <DashboardWrapper>
         <Dashboard />
       </DashboardWrapper>
+      <StatusbarWrapper>
+        <Statusbar />
+      </StatusbarWrapper>
       <Main id="main">
         {props.children}
         <Footer>
@@ -49,7 +54,7 @@ const BackgroundWrapper = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 300px;
+  height: 100%;
   z-index: -1;
 `
 const HeaderWrapper = styled.div`
@@ -63,6 +68,12 @@ const DashboardWrapper = styled.div`
   top: 89px;
   left: 25px;
   z-index: 1;
+`
+const StatusbarWrapper = styled(Div100vh)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
 `
 const Main = styled.div`
   padding: 86px 23.5px 0 89.5px;
