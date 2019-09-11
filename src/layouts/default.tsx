@@ -3,20 +3,11 @@ import { useStaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import Header from '~/components/default/Header'
 import Background from '~/components/default/Background'
+import Dashboard from '~/components/default/Dashboard'
 // import Example from '~/components/Example'
 import '~/assets/scss/variables.scss'
 import '~/assets/scss/default.scss'
 import '~/components/default/Background'
-
-import * as Fontawesome from '@fortawesome/fontawesome-svg-core'
-import {
-  faDesktop,
-  faHomeLgAlt,
-  faSmileWink
-} from '@fortawesome/pro-regular-svg-icons'
-Fontawesome.library.add(faDesktop, faHomeLgAlt, faSmileWink)
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-const icon: Fontawesome.IconLookup = { prefix: 'far', iconName: 'desktop' }
 
 const Layout: React.FC = props => {
   const data = useStaticQuery(graphql`
@@ -35,16 +26,17 @@ const Layout: React.FC = props => {
   // }
   return (
     <>
-      <HeaderWrapper>
-        <Header siteTitle={data.site.siteMetadata.title} />
-      </HeaderWrapper>
-
       <BackgroundWrapper>
         <Background />
       </BackgroundWrapper>
+      <HeaderWrapper>
+        <Header siteTitle={data.site.siteMetadata.title} />
+      </HeaderWrapper>
+      <DashboardWrapper>
+        <Dashboard />
+      </DashboardWrapper>
       {/* <Example text={text} flag={flag} action={action} /> */}
       <Main>
-        <FontAwesomeIcon icon={icon} />
         {props.children}
         <Footer>
           © {new Date().getFullYear()}, Produced by Soichiro Nitta
@@ -54,12 +46,6 @@ const Layout: React.FC = props => {
   )
 }
 
-const HeaderWrapper = styled.div`
-  position: fixed;
-  top: 30px;
-  left: 30px;
-  z-index: 1;
-`
 const BackgroundWrapper = styled.div`
   position: fixed;
   top: 0;
@@ -67,6 +53,17 @@ const BackgroundWrapper = styled.div`
   width: 100%;
   height: 100%;
   z-index: -1;
+`
+const HeaderWrapper = styled.div`
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  z-index: 1;
+`
+const DashboardWrapper = styled.div`
+  position: fixed;
+  top: 90px;
+  z-index: 1;
 `
 const Main = styled.div`
   padding-top: 90px;
