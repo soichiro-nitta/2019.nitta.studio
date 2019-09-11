@@ -41,6 +41,7 @@ const Layout: React.FC = props => {
 }
 
 const Root = styled(Div100vh)`
+  position: relative;
   width: 100%;
   height: 100%;
 `
@@ -65,7 +66,6 @@ const DashboardWrapper = styled.div`
   z-index: 1;
 `
 const Main = styled.div`
-  position: relative;
   padding: 86px 23.5px 0 89.5px;
   width: 100%;
   height: 100%;
