@@ -63,10 +63,9 @@ const Border6 = styled(Border1)`
 `
 const Border7 = styled(Border1)`
   top: 0;
-  left: auto;
-  right: ${size}px;
+  left: ${size}px;
   height: 100%;
-  background: #9d9d9d;
+  background: #b5b5b5;
   transform: scaleY(0);
   transform-origin: top center;
 `
