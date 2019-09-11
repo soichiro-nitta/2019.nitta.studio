@@ -2,15 +2,21 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import {
+//   faDesktop,
+//   faHomeLgAlt,
+//   faSmileWink
+// } from '@fortawesome/pro-regular-svg-icons'
 import {
-  faDesktop,
-  faHomeLgAlt,
-  faSmileWink
-} from '@fortawesome/pro-regular-svg-icons'
+  faHome,
+  faWindow,
+  faSmileWink,
+  faBook
+} from '@fortawesome/pro-duotone-svg-icons'
 
 const Dashboard: React.FC = () => (
   <Root>
-    <Icon to="/">
+    {/* <Icon to="/">
       <FontAwesomeIcon icon={faHomeLgAlt} />
     </Icon>
     <Icon to="/page-2">
@@ -18,6 +24,18 @@ const Dashboard: React.FC = () => (
     </Icon>
     <Icon to="/">
       <FontAwesomeIcon icon={faSmileWink} />
+    </Icon> */}
+    <Icon to="/">
+      <FontAwesomeIcon icon={faHome} />
+    </Icon>
+    <Icon to="/">
+      <FontAwesomeIcon icon={faWindow} />
+    </Icon>
+    <Icon to="/">
+      <FontAwesomeIcon icon={faSmileWink} />
+    </Icon>
+    <Icon to="/">
+      <FontAwesomeIcon icon={faBook} />
     </Icon>
   </Root>
 )
