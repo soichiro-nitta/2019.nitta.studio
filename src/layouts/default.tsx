@@ -4,7 +4,6 @@ import styled from '@emotion/styled'
 import Header from '~/components/default/Header'
 import Background from '~/components/default/Background'
 import Dashboard from '~/components/default/Dashboard'
-// import Example from '~/components/Example'
 import '~/assets/scss/variables.scss'
 import '~/assets/scss/default.scss'
 import '~/components/default/Background'
@@ -19,13 +18,8 @@ const Layout: React.FC = props => {
       }
     }
   `)
-  // const text = 'text'
-  // const flag = true
-  // const action = () => {
-  //   console.log(text)
-  // }
   return (
-    <>
+    <Root>
       <BackgroundWrapper>
         <Background />
       </BackgroundWrapper>
@@ -35,17 +29,20 @@ const Layout: React.FC = props => {
       <DashboardWrapper>
         <Dashboard />
       </DashboardWrapper>
-      {/* <Example text={text} flag={flag} action={action} /> */}
       <Main>
         {props.children}
         <Footer>
           © {new Date().getFullYear()}, Produced by Soichiro Nitta
         </Footer>
       </Main>
-    </>
+    </Root>
   )
 }
 
+const Root = styled.div`
+  width: 100%;
+  height: 100%;
+`
 const BackgroundWrapper = styled.div`
   position: fixed;
   top: 0;
@@ -67,7 +64,7 @@ const DashboardWrapper = styled.div`
 `
 const Main = styled.div`
   position: relative;
-  padding: 80px 30px 0 85px;
+  padding: 80px 25px 0 80px;
   width: 100%;
   height: 100%;
   font-size: 14px;
@@ -80,7 +77,6 @@ const Main = styled.div`
 `
 const Footer = styled.div`
   margin: 30px 0 30px;
-  /* color: #444; */
 `
 
 export default Layout
