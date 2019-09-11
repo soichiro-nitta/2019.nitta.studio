@@ -66,11 +66,11 @@ const DashboardWrapper = styled.div`
   z-index: 1;
 `
 const Main = styled.div`
-  padding-top: 80px;
-  padding-left: 85px;
   position: relative;
+  padding: 80px 30px 0 85px;
   width: 100%;
   height: 100%;
+  font-size: 14px;
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
