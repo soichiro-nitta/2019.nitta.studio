@@ -12,7 +12,7 @@ const Background: React.FC = () => (
   </Root>
 )
 
-const size = 32
+const size = 64
 const Root = styled.h1`
   width: 100%;
   height: 100%;
