@@ -65,8 +65,9 @@ const DashboardWrapper = styled.div`
   left: 25px;
   z-index: 1;
 `
-const Main = styled.div`
+const Main = styled(Div100vh)`
   padding: 86px 23.5px 0 89.5px;
+  position: fixed;
   width: 100%;
   height: 100%;
   font-size: 14px;
