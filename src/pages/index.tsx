@@ -1,12 +1,11 @@
-import React from 'react'
+import * as React from 'react'
 // import { Link } from 'gatsby'
 import styled from '@emotion/styled'
-
 import Layout from '~/layouts/default'
 import Image from '~/components/base/Image'
 import SEO from '~/components/base/Seo'
 
-const IndexPage = () => (
+const IndexPage: React.FC = () => (
   <Layout>
     <SEO title="Home" />
     はじめまして新田聡一郎です。
