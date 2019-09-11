@@ -64,7 +64,7 @@ const DashboardWrapper = styled.div`
 `
 const Main = styled.div`
   position: relative;
-  padding: 80px 25px 0 87px;
+  padding: 80px 25px 0 85px;
   width: 100%;
   height: 100%;
   font-size: 14px;
