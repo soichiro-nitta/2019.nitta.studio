@@ -14,13 +14,13 @@ const Dashboard: React.FC = () => (
     <Icon to="/">
       <FontAwesomeIcon icon={faHome} />
     </Icon>
-    <Icon to="/">
+    <Icon to="/page-2">
       <FontAwesomeIcon icon={faWindow} />
     </Icon>
     <Icon to="/">
       <FontAwesomeIcon icon={faSmileWink} />
     </Icon>
-    <Icon to="/">
+    <Icon to="/page-2">
       <FontAwesomeIcon icon={faBook} />
     </Icon>
   </>

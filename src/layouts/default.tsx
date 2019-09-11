@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
+import Div100vh from 'react-div-100vh'
 import Header from '~/components/default/Header'
 import Background from '~/components/default/Background'
 import Dashboard from '~/components/default/Dashboard'
@@ -63,7 +64,7 @@ const DashboardWrapper = styled.div`
   left: 25px;
   z-index: 1;
 `
-const Main = styled.div`
+const Main = styled(Div100vh)`
   position: relative;
   padding: 86px 23.5px 0 89.5px;
   width: 100%;
