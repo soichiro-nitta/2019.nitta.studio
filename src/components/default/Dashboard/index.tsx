@@ -45,7 +45,7 @@ const Root = styled.div`
 `
 const Icon = styled(Link)`
   display: block;
-  :not(:first-child) {
+  :not(:first-of-type) {
     margin-top: 45px;
   }
   width: 100%;
