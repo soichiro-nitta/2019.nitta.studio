@@ -1,15 +1,16 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import { Global } from '@emotion/core'
 import { ThemeProvider } from 'emotion-theming'
 import styled from '@emotion/styled'
 import Div100vh from 'react-div-100vh'
+import { theme, globalStyles } from '~/components/styles'
 import Header from '~/components/default/Header'
 import Background from '~/components/default/Background'
 import Dashboard from '~/components/default/Dashboard'
 import Statusbar from '~/components/default/Statusbar'
-import '~/assets/scss/variables.scss'
-import '~/assets/scss/default.scss'
-import '~/components/default/Background'
+
+// import '~/assets/scss/default.scss'
 
 const Layout: React.FC = props => {
   const data = useStaticQuery(graphql`
@@ -22,7 +23,8 @@ const Layout: React.FC = props => {
     }
   `)
   return (
-    <ThemeProvider theme="">
+    <ThemeProvider theme={theme}>
+      <Global styles={globalStyles} />
       <BackgroundWrapper>
         <Background />
       </BackgroundWrapper>
