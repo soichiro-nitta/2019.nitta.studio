@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import { ThemeProvider } from 'emotion-theming'
 import styled from '@emotion/styled'
 import Div100vh from 'react-div-100vh'
 import Header from '~/components/default/Header'
@@ -21,7 +22,7 @@ const Layout: React.FC = props => {
     }
   `)
   return (
-    <Root>
+    <ThemeProvider theme="">
       <BackgroundWrapper>
         <Background />
       </BackgroundWrapper>
@@ -40,15 +41,10 @@ const Layout: React.FC = props => {
           © {new Date().getFullYear()}, Produced by Soichiro Nitta
         </Footer>
       </Main>
-    </Root>
+    </ThemeProvider>
   )
 }
 
-const Root = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-`
 const BackgroundWrapper = styled.div`
   position: fixed;
   top: 0;

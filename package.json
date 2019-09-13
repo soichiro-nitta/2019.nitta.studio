@@ -5,7 +5,7 @@
   "author": "Soichiro Nitta",
   "scripts": {
     "build": "gatsby build",
-    "dev": "gatsby develop --host=192.168.1.6",
+    "dev": "gatsby develop --host=172.21.101.67",
     "format": "prettier --write src/**/*.{js,ts,jsx,tsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -20,6 +20,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/pro-duotone-svg-icons": "^5.10.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "emotion-theming": "^10.0.18",
     "gatsby": "^2.13.50",
     "gatsby-image": "^2.2.8",
     "gatsby-plugin-emotion": "^4.1.2",
