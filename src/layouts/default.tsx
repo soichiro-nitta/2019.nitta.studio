@@ -1,17 +1,15 @@
 import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import { Global } from '@emotion/core'
-import { ThemeProvider } from 'emotion-theming'
-import styled from '@emotion/styled'
+import * as Gatsby from 'gatsby'
 import Div100vh from 'react-div-100vh'
-import { theme, globalStyles } from '~/components/styles'
+import styled from '~/utils/emotion'
+import Theme from '~/components/default/Theme'
 import Header from '~/components/default/Header'
 import Background from '~/components/default/Background'
 import Dashboard from '~/components/default/Dashboard'
 import Statusbar from '~/components/default/Statusbar'
 
 const Layout: React.FC = props => {
-  const data = useStaticQuery(graphql`
+  const data = Gatsby.useStaticQuery(Gatsby.graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -21,8 +19,7 @@ const Layout: React.FC = props => {
     }
   `)
   return (
-    <ThemeProvider theme={theme}>
-      <Global styles={globalStyles} />
+    <Theme>
       <BackgroundWrapper>
         <Background />
       </BackgroundWrapper>
@@ -41,7 +38,7 @@ const Layout: React.FC = props => {
           © {new Date().getFullYear()}, Produced by Soichiro Nitta
         </Footer>
       </Main>
-    </ThemeProvider>
+    </Theme>
   )
 }
 

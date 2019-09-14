@@ -1,18 +1,6 @@
 import { css } from '@emotion/core'
-import sizes, { SizesTypes } from '~/components/styles/sizes'
-import styled, { CreateStyled } from '@emotion/styled'
 
-export type ThemeTypes = {
-  sizes: SizesTypes
-}
-
-export default styled as CreateStyled<ThemeTypes>
-
-export const theme: ThemeTypes = {
-  sizes
-}
-
-export const globalStyles = css`
+const globalStyles = css`
   *,
   :after,
   :before {
@@ -121,3 +109,5 @@ export const globalStyles = css`
     height: 100%;
   }
 `
+
+export default globalStyles
