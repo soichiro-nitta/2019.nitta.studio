@@ -10,8 +10,6 @@ import Background from '~/components/default/Background'
 import Dashboard from '~/components/default/Dashboard'
 import Statusbar from '~/components/default/Statusbar'
 
-// import '~/assets/scss/default.scss'
-
 const Layout: React.FC = props => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

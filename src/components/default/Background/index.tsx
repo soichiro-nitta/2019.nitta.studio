@@ -1,6 +1,10 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 
+type Props = {
+  theme?: any
+}
+
 const Background: React.FC = () => (
   <Root>
     <Border1 />
@@ -17,10 +21,10 @@ const Root = styled.h1`
   width: 100%;
   height: 100%;
 `
-const Border1 = styled.div`
+const Border1 = styled.div<Props>`
   position: absolute;
   top: 0;
-  left: ${size}px;
+  left: ${(props): Props => props.theme.sizes.phone.dashboard}px;
   width: 1px;
   height: 9px;
   background: #e5e5e5;

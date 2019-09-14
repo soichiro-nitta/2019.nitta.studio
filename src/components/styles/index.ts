@@ -1,7 +1,14 @@
 import { css } from '@emotion/core'
-import sizes from '~/components/styles/sizes'
+import sizes, { SizesTypes } from '~/components/styles/sizes'
+import styled, { CreateStyled } from '@emotion/styled'
 
-export const theme = {
+export type ThemeTypes = {
+  sizes: SizesTypes
+}
+
+export default styled as CreateStyled<ThemeTypes>
+
+export const theme: ThemeTypes = {
   sizes
 }
 
