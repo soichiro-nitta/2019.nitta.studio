@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as Gatsby from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import Div100vh from 'react-div-100vh'
 import styled from '~/utils/emotion'
 import Theme from '~/components/default/Theme'
@@ -9,7 +9,7 @@ import Dashboard from '~/components/default/Dashboard'
 import Statusbar from '~/components/default/Statusbar'
 
 const Layout: React.FC = props => {
-  const data = Gatsby.useStaticQuery(Gatsby.graphql`
+  const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
