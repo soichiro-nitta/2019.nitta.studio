@@ -6,13 +6,10 @@ type Props = {
   siteTitle: string
 }
 
-const Header: React.FC<Props> = props => (
-  <Root>
-    <Link to="/">{props.siteTitle}</Link>
-  </Root>
-)
+const Header: React.FC<Props> = props => <Root to="/">{props.siteTitle}</Root>
 
-const Root = styled.h1`
+const Root = styled(Link)`
+  display: inline-block;
   font-size: 30px;
   font-weight: bold;
   line-height: 1;

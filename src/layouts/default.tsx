@@ -52,14 +52,18 @@ const BackgroundWrapper = styled.div`
 `
 const HeaderWrapper = styled.div`
   position: fixed;
-  top: 20px;
-  left: 22.5px;
+  top: ${(props): number => (props.theme.sizes.phone.dashboard - 30) / 2 + 2}px;
+  left: ${(props): number =>
+    (props.theme.sizes.phone.dashboard - 30) / 2 + 5}px;
   z-index: 1;
 `
 const DashboardWrapper = styled.div`
   position: fixed;
-  top: 89px;
-  left: 25px;
+  top: ${(props): number =>
+    props.theme.sizes.phone.dashboard +
+    (props.theme.sizes.phone.dashboard - 30) / 2 +
+    6}px;
+  left: ${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px;
   z-index: 1;
 `
 const StatusbarWrapper = styled(Div100vh)`
@@ -69,7 +73,17 @@ const StatusbarWrapper = styled(Div100vh)`
   z-index: 0;
 `
 const Main = styled.div`
-  padding: 86px 23.5px 0 89.5px;
+  padding-top: ${(props): number =>
+    props.theme.sizes.phone.dashboard +
+    (props.theme.sizes.phone.dashboard - 30) / 2 +
+    3}px;
+  padding-right: ${(props): number =>
+    (props.theme.sizes.phone.dashboard - 18) / 2}px;
+  padding-bottom: 0;
+  padding-left: ${(props): number =>
+    props.theme.sizes.phone.dashboard +
+    (props.theme.sizes.phone.dashboard - 18) / 2 +
+    1}px;
   width: 100%;
   height: 100%;
   font-size: 14px;

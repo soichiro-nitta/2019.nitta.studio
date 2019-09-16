@@ -21,7 +21,7 @@ const Border1 = styled.div`
   top: 0;
   left: ${(props): number => props.theme.sizes.phone.dashboard}px;
   width: 1px;
-  height: 9px;
+  height: 8px;
   background: #e5e5e5;
 `
 const Border2 = styled(Border1)`
@@ -35,10 +35,10 @@ const Border3 = styled(Border1)`
     (100% - ${(props): number => props.theme.sizes.phone.dashboard * 2 + 2}px) /
       3 + ${(props): number => props.theme.sizes.phone.dashboard + 1}px
   );
-  height: 12px;
+  height: 10px;
 `
 const Border4 = styled(Border1)`
-  top: ${(props): number => props.theme.sizes.phone.dashboard * 2 + 2}px;
+  top: ${(props): number => props.theme.sizes.phone.dashboard}px;
   left: calc(
     (100% - ${(props): number => props.theme.sizes.phone.dashboard * 2 + 2}px) /
       3 + ${(props): number => props.theme.sizes.phone.dashboard + 1}px
