@@ -8,11 +8,7 @@
     "dev": "gatsby develop --host=192.168.1.6",
     "format": "prettier --write src/**/*.{js,ts,jsx,tsx}",
     "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "storybook": "NODE_ENV=production start-storybook -s static",
-    "build-storybook": "NODE_ENV=production build-storybook -s static",
-    "deploy-storybook": "gh-pages -d storybook-static"
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "@emotion/core": "^10.0.15",
@@ -42,23 +38,8 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.1.10",
-    "@storybook/addon-console": "^1.2.1",
-    "@storybook/addon-info": "^5.1.10",
-    "@storybook/addon-knobs": "^5.1.10",
-    "@storybook/addon-links": "^5.1.10",
-    "@storybook/addon-storysource": "^5.1.10",
-    "@storybook/addon-viewport": "^5.1.10",
-    "@storybook/addons": "^5.1.10",
-    "@storybook/cli": "^5.1.10",
-    "@storybook/react": "^5.1.10",
-    "@storybook/theming": "^5.1.11",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
-    "@types/storybook__addon-actions": "^3.4.3",
-    "@types/storybook__addon-info": "^4.1.2",
-    "@types/storybook__addon-knobs": "^5.0.3",
-    "@types/storybook__react": "^4.0.2",
     "@typescript-eslint/eslint-plugin": "^2.1.0",
     "@typescript-eslint/parser": "^2.1.0",
     "babel-eslint": "^10.0.2",
@@ -66,9 +47,7 @@
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
-    "gh-pages": "^2.1.1",
     "prettier": "^1.18.2",
-    "react-docgen-typescript-loader": "^3.2.0",
     "typescript": "^3.6.2"
   }
 }
