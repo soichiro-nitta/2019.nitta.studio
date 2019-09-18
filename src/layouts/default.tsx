@@ -76,7 +76,7 @@ const Main = styled.div`
   padding-top: ${(props): number =>
     props.theme.sizes.phone.dashboard +
     (props.theme.sizes.phone.dashboard - 30) / 2 +
-    3}px;
+    2}px;
   padding-right: ${(props): number =>
     (props.theme.sizes.phone.dashboard - 18) / 2}px;
   padding-bottom: 0;
