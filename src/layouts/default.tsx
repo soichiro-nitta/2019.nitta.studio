@@ -54,7 +54,7 @@ const HeaderWrapper = styled.div`
   position: fixed;
   top: ${(props): number => (props.theme.sizes.phone.dashboard - 30) / 2 + 2}px;
   left: ${(props): number =>
-    (props.theme.sizes.phone.dashboard - 30) / 2 + 5}px;
+    (props.theme.sizes.phone.dashboard - 30) / 2 + 3.3}px;
   z-index: 1;
 `
 const DashboardWrapper = styled.div`
