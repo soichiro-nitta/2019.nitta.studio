@@ -4,8 +4,9 @@ import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faHome,
-  faWindow,
+  faCode,
   faSmileWink,
+  faFeatherAlt,
   faBook
 } from '@fortawesome/pro-duotone-svg-icons'
 
@@ -14,14 +15,17 @@ const Dashboard: React.FC = () => (
     <Icon to="/">
       <FontAwesomeIcon icon={faHome} />
     </Icon>
-    <Icon to="/page-2">
-      <FontAwesomeIcon icon={faWindow} />
+    <Icon to="/works">
+      <FontAwesomeIcon icon={faCode} />
     </Icon>
-    <Icon to="/">
-      <FontAwesomeIcon icon={faSmileWink} />
+    <Icon to="/tweet">
+      <FontAwesomeIcon icon={faFeatherAlt} />
     </Icon>
-    <Icon to="/page-2">
+    <Icon to="/diary">
       <FontAwesomeIcon icon={faBook} />
+    </Icon>
+    <Icon to="/about">
+      <FontAwesomeIcon icon={faSmileWink} />
     </Icon>
   </>
 )

@@ -21,7 +21,6 @@ const Statusbar: React.FC = () => {
 
 const Scrollbar = styled.div`
   position: absolute;
-  /* left: 23.5px; */
   left: ${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px;
   bottom: ${(props): number => (props.theme.sizes.phone.dashboard - 2) / 2}px;
   width: 18px;
