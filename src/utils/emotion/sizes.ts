@@ -2,7 +2,7 @@ const sizes = {
   desktop: {},
   tablet: {},
   phone: {
-    dashboard: 60
+    dashboard: 61
   }
 }
 export default sizes
