@@ -62,7 +62,7 @@ const ImageWrapper = styled.div`
 const VideoWrapper = styled.div`
   margin-top: 12px;
   width: 100%;
-  height: 150px;
+  height: 170px;
   overflow: hidden;
   video {
     width: 100%;
