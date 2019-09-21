@@ -62,7 +62,7 @@ const DashboardWrapper = styled.div`
   top: ${(props): number =>
     props.theme.sizes.phone.dashboard +
     (props.theme.sizes.phone.dashboard - 30) / 2 +
-    6}px;
+    4}px;
   left: ${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px;
   z-index: 1;
 `
@@ -76,7 +76,7 @@ const Main = styled.div`
   padding-top: ${(props): number =>
     props.theme.sizes.phone.dashboard +
     (props.theme.sizes.phone.dashboard - 30) / 2 +
-    2}px;
+    1}px;
   padding-right: ${(props): number =>
     (props.theme.sizes.phone.dashboard - 18) / 2}px;
   padding-bottom: 0;
