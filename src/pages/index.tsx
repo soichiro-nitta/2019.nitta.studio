@@ -1,6 +1,6 @@
 import * as React from 'react'
 // import { Link } from 'gatsby'
-import styled from '@emotion/styled'
+import styled from '~/utils/emotion'
 import Layout from '~/layouts/default'
 import Image from '~/components/base/Image'
 import SEO from '~/components/base/Seo'
@@ -15,6 +15,15 @@ const IndexPage: React.FC = () => {
     <Layout>
       <SEO title="Home" />
       はじめまして新田聡一郎です。
+      <p>
+        lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
       <VideoWrapper>
         <video
           ref={video}
@@ -25,15 +34,6 @@ const IndexPage: React.FC = () => {
           loop
         />
       </VideoWrapper>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
       <p>
         あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
         またそのなかでいっしょになったたくさんのひとたち、ファゼーロとjロザーロ、羊飼のミーロや、顔の赤いこどもたち、地主のテーモ、山猫博士のボーガント・デストゥパーゴなど、いまこの暗い巨きな石の建物のなかで考えていると、みんなむかし風のなつかしい青い幻燈のように思われます。では、わたくしはいつかの小さなみだしをつけながら、しずかにあの年のイーハトーヴォの五月から十月までを書きつけましょう。
@@ -60,9 +60,12 @@ const ImageWrapper = styled.div`
   width: 150px;
 `
 const VideoWrapper = styled.div`
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 100%;
+  margin-top: 23px;
+  margin-bottom: 25px;
+  margin-left: -${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px;
+  width: calc(
+    100% + ${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px
+  );
   height: 150px;
   overflow: hidden;
   video {
