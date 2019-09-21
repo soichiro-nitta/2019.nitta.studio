@@ -39,7 +39,7 @@ const Icon = styled(Link)`
   display: block;
   :not(:first-of-type) {
     margin-top: ${(props): number =>
-      ((props.theme.sizes.phone.dashboard - 30) / 2 + 2) * 2}px;
+      ((props.theme.sizes.phone.dashboard - 30) / 2 + 5) * 2}px;
   }
   width: 100%;
   height: 16px;
@@ -54,7 +54,7 @@ const Icon = styled(Link)`
 `
 const Border = styled.div`
   margin: ${(props): number =>
-      ((props.theme.sizes.phone.dashboard - 30) / 2 + 2) * 2}px
+      ((props.theme.sizes.phone.dashboard - 30) / 2 + 5) * 2}px
     auto 0;
   width: 100%;
   height: 1px;

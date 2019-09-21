@@ -60,13 +60,18 @@ const ImageWrapper = styled.div`
   width: 150px;
 `
 const VideoWrapper = styled.div`
-  margin-top: 23px;
-  margin-bottom: 25px;
+  margin: ${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px 0;
   margin-left: -${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px;
+  padding: ${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px
+    0;
+  padding-right: ${(props): number =>
+    (props.theme.sizes.phone.dashboard - 18) / 2}px;
   width: calc(
-    100% + ${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px
+    100% + ${(props): number => props.theme.sizes.phone.dashboard - 18}px
   );
-  height: 150px;
+  height: 210px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
   overflow: hidden;
   video {
     width: 100%;
