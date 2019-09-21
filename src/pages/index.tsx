@@ -1,9 +1,10 @@
 import * as React from 'react'
-// import { Link } from 'gatsby'
+import { Link } from 'gatsby'
 import styled from '~/utils/emotion'
 import Layout from '~/layouts/default'
 import Image from '~/components/base/Image'
 import SEO from '~/components/base/Seo'
+import Twitter from '~/components/index/Twitter'
 
 const IndexPage: React.FC = () => {
   const video = React.useRef(null)
@@ -14,14 +15,8 @@ const IndexPage: React.FC = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      Designer & Developer 新田聡一郎の活動報告をしていくサイトです。
-      <Twitter
-        href="https://twitter.com/soichiro_nitta"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        近況報告はTwitterにて　→
-      </Twitter>
+      Designer & Developer 新田聡一郎の活動報告をしているサイトです。
+      <Twitter />
       <VideoWrapper>
         <video
           ref={video}
@@ -57,7 +52,7 @@ const IndexPage: React.FC = () => {
       <ImageWrapper>
         <Image />
       </ImageWrapper>
-      {/* <link to="/page-2/">Go to page 2</Link> */}
+      <Link to="/page-2/">Go to page 2</Link>
     </Layout>
   )
 }
@@ -86,13 +81,6 @@ const VideoWrapper = styled.div`
     object-fit: cover;
     /* opacity: 0; */
   }
-`
-const Twitter = styled.a`
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px;
-  border: 1px solid #e5e5e5;
-  line-height: 1;
 `
 
 export default IndexPage

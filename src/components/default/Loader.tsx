@@ -3,13 +3,13 @@ import styled from '~/utils/emotion'
 
 const Loader: React.FC = () => {
   return (
-    <Svg viewBox="25 25 50 50">
+    <Root viewBox="25 25 50 50">
       <Circle cx="50" cy="50" r="20" />
-    </Svg>
+    </Root>
   )
 }
 
-const Svg = styled.svg`
+const Root = styled.svg`
   width: ${(props): number => props.theme.sizes.phone.scrollbar + 2}px;
   height: ${(props): number => props.theme.sizes.phone.scrollbar + 2}px;
   transform-origin: center center;

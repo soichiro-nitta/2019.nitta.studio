@@ -113,7 +113,7 @@ const Main = styled.div`
   z-index: 0;
 `
 const Footer = styled.div`
-  margin: 30px 0 22px;
+  margin: 30px 0 19px;
 `
 
 export default Layout
