@@ -23,7 +23,7 @@ const Root = styled.a`
   line-height: 1;
   border: 1px solid #e5e5e5;
   svg {
-    margin-left: 10px;
+    margin-left: 7.5px;
   }
 `
 
