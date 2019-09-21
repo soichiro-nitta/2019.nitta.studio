@@ -74,7 +74,6 @@ const ScrollbarWrapper = styled.div`
     (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
     2}px;
   bottom: ${(props): number => (props.theme.sizes.phone.dashboard - 2) / 2}px;
-  width: ${(props): number => props.theme.sizes.phone.scrollbar}px;
   height: 2px;
 `
 const LoaderWrapper = styled.div`
@@ -89,7 +88,6 @@ const LoaderWrapper = styled.div`
       props.theme.sizes.phone.scrollbar -
       2) /
     2}px;
-  width: ${(props): number => props.theme.sizes.phone.scrollbar + 2}px;
   height: ${(props): number => props.theme.sizes.phone.scrollbar + 2}px;
 `
 const Main = styled.div`
