@@ -1,12 +1,12 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Div100vh from 'react-div-100vh'
 import styled from '~/utils/emotion'
 import Theme from '~/components/default/Theme'
 import Header from '~/components/default/Header'
 import Background from '~/components/default/Background'
 import Dashboard from '~/components/default/Dashboard'
-import Statusbar from '~/components/default/Statusbar'
+import Scrollbar from '~/components/default/Scrollbar'
+import Loader from '~/components/default/Loader'
 
 const Layout: React.FC = props => {
   const data = useStaticQuery(graphql`
@@ -29,9 +29,12 @@ const Layout: React.FC = props => {
       <DashboardWrapper>
         <Dashboard />
       </DashboardWrapper>
-      <StatusbarWrapper>
-        <Statusbar />
-      </StatusbarWrapper>
+      <ScrollbarWrapper>
+        <Scrollbar />
+      </ScrollbarWrapper>
+      <LoaderWrapper>
+        <Loader />
+      </LoaderWrapper>
       <Main id="main">
         {props.children}
         <Footer>
@@ -65,11 +68,29 @@ const DashboardWrapper = styled.div`
   left: ${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px;
   z-index: 1;
 `
-const StatusbarWrapper = styled(Div100vh)`
+const ScrollbarWrapper = styled.div`
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0;
+  left: ${(props): number =>
+    (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
+    2}px;
+  bottom: ${(props): number => (props.theme.sizes.phone.dashboard - 2) / 2}px;
+  width: ${(props): number => props.theme.sizes.phone.scrollbar}px;
+  height: 2px;
+`
+const LoaderWrapper = styled.div`
+  position: fixed;
+  left: ${(props): number =>
+    (props.theme.sizes.phone.dashboard -
+      props.theme.sizes.phone.scrollbar -
+      2) /
+    2}px;
+  bottom: ${(props): number =>
+    (props.theme.sizes.phone.dashboard -
+      props.theme.sizes.phone.scrollbar -
+      2) /
+    2}px;
+  width: ${(props): number => props.theme.sizes.phone.scrollbar + 2}px;
+  height: ${(props): number => props.theme.sizes.phone.scrollbar + 2}px;
 `
 const Main = styled.div`
   padding-top: ${(props): number =>

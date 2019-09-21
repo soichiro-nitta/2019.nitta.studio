@@ -14,16 +14,14 @@ const IndexPage: React.FC = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      はじめまして新田聡一郎です。
-      <p>
-        lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
+      Designer & Developer 新田聡一郎の活動報告をしていくサイトです。
+      <Twitter
+        href="https://twitter.com/soichiro_nitta"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        近況報告はTwitterにて　→
+      </Twitter>
       <VideoWrapper>
         <video
           ref={video}
@@ -34,6 +32,15 @@ const IndexPage: React.FC = () => {
           loop
         />
       </VideoWrapper>
+      <p>
+        lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
       <p>
         あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
         またそのなかでいっしょになったたくさんのひとたち、ファゼーロとロザーロ、羊飼のミーロや、顔の赤いこどもたち、地主のテーモ、山猫博士のボーガント・デストゥパーゴなど、いまこの暗い巨きな石の建物のなかで考えていると、みんなむかし風のなつかしい青い幻燈のように思われます。では、わたくしはいつかの小さなみだしをつけながら、しずかにあの年のイーハトーヴォの五月から十月までを書きつけましょう。
@@ -79,6 +86,13 @@ const VideoWrapper = styled.div`
     object-fit: cover;
     /* opacity: 0; */
   }
+`
+const Twitter = styled.a`
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  line-height: 1;
 `
 
 export default IndexPage
