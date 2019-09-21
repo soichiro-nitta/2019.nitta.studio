@@ -62,7 +62,7 @@ const DashboardWrapper = styled.div`
   top: ${(props): number =>
     props.theme.sizes.phone.dashboard +
     (props.theme.sizes.phone.dashboard - 30) / 2 +
-    4}px;
+    2}px;
   left: ${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px;
   z-index: 1;
 `
@@ -73,10 +73,13 @@ const StatusbarWrapper = styled(Div100vh)`
   z-index: 0;
 `
 const Main = styled.div`
-  padding-top: ${(props): number =>
+  /* padding-top: ${(props): number =>
     props.theme.sizes.phone.dashboard +
     (props.theme.sizes.phone.dashboard - 30) / 2 +
-    1}px;
+    1}px; */
+  padding-top: ${(props): number =>
+    props.theme.sizes.phone.dashboard +
+    ((props.theme.sizes.phone.dashboard - 30) / 2 + 2) / 2}px;
   padding-right: ${(props): number =>
     (props.theme.sizes.phone.dashboard - 18) / 2}px;
   padding-bottom: 0;
