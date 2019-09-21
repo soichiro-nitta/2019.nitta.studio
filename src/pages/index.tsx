@@ -60,9 +60,10 @@ const ImageWrapper = styled.div`
   width: 150px;
 `
 const VideoWrapper = styled.div`
-  margin-top: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 100%;
-  height: 170px;
+  height: 150px;
   overflow: hidden;
   video {
     width: 100%;
