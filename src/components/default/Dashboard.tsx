@@ -22,14 +22,14 @@ const Dashboard: React.FC = () => (
     <Icon to="/diary">
       <FontAwesomeIcon icon={faBook} />
     </Icon>
-    <Icon to="/about">
+    <Icon to="/contact">
       <FontAwesomeIcon icon={faSmileWink} />
     </Icon>
     <Border />
-    <Icon to="/about">
+    <Icon to="/">
       <FontAwesomeIcon icon={faFillDrip} />
     </Icon>
-    <Icon to="/about">
+    <Icon to="/">
       <FontAwesomeIcon icon={faVolumeSlash} />
     </Icon>
   </>
