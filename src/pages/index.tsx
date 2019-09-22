@@ -21,7 +21,7 @@ type Props = {
   }
 }
 
-const IndexPage: React.FC<Props> = props => {
+const Index: React.FC<Props> = props => {
   const video = React.useRef(null)
   React.useEffect(() => {
     video.current.load()
@@ -134,7 +134,7 @@ const Work = styled.li`
   ${(props): string => props.theme.mixins.lhCrop(2)}
 `
 
-export default IndexPage
+export default Index
 
 export const pageQuery = graphql`
   query {
