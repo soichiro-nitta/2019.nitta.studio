@@ -26,6 +26,8 @@ const Works: React.FC<Props> = props => {
       <Seo title="Works" />
       <P1>
         <b>Works</b>
+        <br />
+        最新の作品
       </P1>
       <ul>
         {props.data.allMarkdownRemark.edges.map(({ node }, index) => {
