@@ -59,6 +59,7 @@ const globalStyles = css`
   h2,
   h3 {
     margin: 0;
+    font-size: 14px;
   }
   p {
     margin: 0;
