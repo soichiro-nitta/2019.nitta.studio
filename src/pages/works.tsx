@@ -31,7 +31,7 @@ const Works: React.FC<Props> = props => {
         {props.data.allMarkdownRemark.edges.map(({ node }, index) => {
           return (
             <Work key={index}>
-              <Link to={`/${node.frontmatter.path}`}>
+              <Link to={node.frontmatter.path}>
                 {node.frontmatter.title}
                 <br />
                 {node.frontmatter.date}
