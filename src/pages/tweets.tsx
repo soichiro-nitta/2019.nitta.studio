@@ -24,9 +24,7 @@ const Tweets: React.FC<Props> = props => {
     <Layout>
       <Seo title="Tweets" />
       <P1>
-        <b>Tweets</b>
-        <br />
-        ふだん考えていること・技術・デザイン等について、ひっそりとこちらで呟いています。
+        普段考えていること・技術・デザインについて、ひっそりとこちらで呟いています。
       </P1>
       <ul>
         {props.data.allMarkdownRemark.edges.map(({ node }, index) => {
