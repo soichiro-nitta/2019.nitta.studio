@@ -26,7 +26,7 @@ const Tweets: React.FC<Props> = props => {
       <P1>
         <b>Tweets</b>
         <br />
-        哲学・技術・デザインなど、ひっそりとこちらで呟きます。
+        ふだん考えていること・技術・デザイン等について、ひっそりとこちらで呟いています。
       </P1>
       <ul>
         {props.data.allMarkdownRemark.edges.map(({ node }, index) => {
