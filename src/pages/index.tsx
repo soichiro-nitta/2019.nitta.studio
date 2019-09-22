@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from '~/utils/emotion'
 import Layout from '~/layouts/default'
-import SEO from '~/components/base/Seo'
+import Seo from '~/components/base/Seo'
 import Twitter from '~/components/index/Twitter'
 
 const IndexPage: React.FC = () => {
@@ -12,7 +12,7 @@ const IndexPage: React.FC = () => {
   })
   return (
     <Layout>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <P1>
         UI Designer & Software Engineer
         新田聡一郎の活動報告をしているサイトです。
