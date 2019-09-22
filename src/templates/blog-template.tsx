@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
+import Layout from '~/layouts/default'
 import Seo from '~/components/base/Seo'
 
 type Props = {
@@ -13,16 +14,19 @@ type Props = {
     }
   }
 }
-const BlogTemplate: React.FC<Props> = (props: Props) => {
+
+const BlogTemplate: React.FC<Props> = props => {
   const html = props.data.markdownRemark.html
   const { title, date } = props.data.markdownRemark.frontmatter
   return (
-    <div>
-      <Seo title={`${title} Page`} />
-      <h1>{`${title} Page`}</h1>
-      <div>date : {date}</div>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
+    <Layout>
+      <div>
+        <Seo title={`${title} Page`} />
+        <h1>{`${title} Page`}</h1>
+        <div>date : {date}</div>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
+    </Layout>
   )
 }
 
