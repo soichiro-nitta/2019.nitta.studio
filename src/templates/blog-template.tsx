@@ -1,18 +1,24 @@
-import React from 'react'
+import * as React from 'react'
 import { graphql } from 'gatsby'
-import SEO from '~/components/base/Seo'
+import Seo from '~/components/base/Seo'
 
-const BlogTemplate = ({ data }: any) => {
-  console.log(data)
-  const {
+type Props = {
+  data: {
     markdownRemark: {
-      html,
-      frontmatter: { title, date }
+      html: string
+      frontmatter: {
+        title: string
+        date: string
+      }
     }
-  } = data
+  }
+}
+const BlogTemplate: React.FC<Props> = (props: Props) => {
+  const html = props.data.markdownRemark.html
+  const { title, date } = props.data.markdownRemark.frontmatter
   return (
     <div>
-      <SEO title={`${title} Page`} />
+      <Seo title={`${title} Page`} />
       <h1>{`${title} Page`}</h1>
       <div>date : {date}</div>
       <div dangerouslySetInnerHTML={{ __html: html }} />
