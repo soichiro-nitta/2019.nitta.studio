@@ -16,15 +16,15 @@ type Props = {
 }
 
 const BlogTemplate: React.FC<Props> = props => {
-  const html = props.data.markdownRemark.html
-  const { title, date } = props.data.markdownRemark.frontmatter
   return (
     <Layout>
       <div>
-        <Seo title={`${title} Page`} />
-        <h1>{`${title} Page`}</h1>
-        <div>date : {date}</div>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <Seo title={props.data.markdownRemark.frontmatter.title} />
+        <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+        <div>date : {props.data.markdownRemark.frontmatter.date}</div>
+        <div
+          dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
+        />
       </div>
     </Layout>
   )
