@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import styled from '~/utils/emotion'
 import Layout from '~/layouts/default'
 import Seo from '~/components/base/Seo'
@@ -7,7 +7,18 @@ import Twitter from '~/components/index/Twitter'
 
 type Props = {
   data: {
-    allMarkdownRemark: {
+    works: {
+      edges: {
+        node: {
+          frontmatter: {
+            title: string
+            date: string
+            path: string
+          }
+        }
+      }[]
+    }
+    tweets: {
       edges: {
         node: {
           frontmatter: {
@@ -22,6 +33,7 @@ type Props = {
 }
 
 const Index: React.FC<Props> = props => {
+  console.log(props)
   const video = React.useRef(null)
   React.useEffect(() => {
     video.current.load()
@@ -54,7 +66,22 @@ const Index: React.FC<Props> = props => {
         「Nitta.Studio」は新田聡一郎が活動報告のために個人的に制作、管理しているホームページです。
       </P2>
       <ul>
-        {props.data.allMarkdownRemark.edges.map(({ node }, index) => {
+        {props.data.works.edges.map(({ node }, index) => {
+          return (
+            <Work key={index}>
+              <Link to={`/${node.frontmatter.path}`}>
+                {node.frontmatter.title}
+                <br />
+                {node.frontmatter.date}
+                <br />
+                {node.frontmatter.path}
+              </Link>
+            </Work>
+          )
+        })}
+      </ul>
+      <ul>
+        {props.data.tweets.edges.map(({ node }, index) => {
           return (
             <Work key={index}>
               <Link to={`/${node.frontmatter.path}`}>
@@ -140,8 +167,27 @@ const Work = styled.li`
 export default Index
 
 export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+  {
+    works: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { category: { eq: "works" } } }
+      limit: 2
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            date
+            path
+          }
+        }
+      }
+    }
+    tweets: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { category: { eq: "tweets" } } }
+      limit: 2
+    ) {
       edges {
         node {
           frontmatter {
