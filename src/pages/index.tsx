@@ -72,16 +72,25 @@ const Index: React.FC<Props> = props => {
   )
 }
 
+const P1 = styled.p`
+  padding: 0
+    ${(props): number =>
+      (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
+      2}px;
+  ${(props): string => props.theme.mixins.lhCrop(2)}
+`
 const TwitterWrapper = styled.div`
   margin-top: ${(props): number =>
     (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
     3}px;
+  margin-left: ${(props): number =>
+    (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
+    2}px;
 `
 const VideoWrapper = styled.div`
   margin-top: ${(props): number =>
     (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
     2}px;
-  margin-left: -${(props): number => (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) / 2}px;
   padding: ${(props): number =>
       (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
       2}px
@@ -89,9 +98,7 @@ const VideoWrapper = styled.div`
   padding-right: ${(props): number =>
     (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
     2}px;
-  width: calc(
-    100% + ${(props): number => props.theme.sizes.phone.dashboard - 18}px
-  );
+  width: 100%;
   height: 210px;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
@@ -102,9 +109,6 @@ const VideoWrapper = styled.div`
     object-fit: cover;
     /* opacity: 0; */
   }
-`
-const P1 = styled.p`
-  ${(props): string => props.theme.mixins.lhCrop(2)}
 `
 const P2 = styled(P1)`
   margin-top: ${(props): number =>
@@ -120,7 +124,6 @@ const Work = styled.li`
   margin-top: ${(props): number =>
     (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
     2}px;
-  margin-left: -${(props): number => (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) / 2}px;
   padding-top: ${(props): number =>
     (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
     2}px;

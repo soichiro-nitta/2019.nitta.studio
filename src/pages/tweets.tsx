@@ -42,13 +42,16 @@ const Tweets: React.FC<Props> = props => {
 }
 
 const P1 = styled.p`
+  padding: 0
+    ${(props): number =>
+      (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
+      2}px;
   ${(props): string => props.theme.mixins.lhCrop(2)}
 `
 const Work = styled.li`
   margin-top: ${(props): number =>
     (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
     2}px;
-  margin-left: -${(props): number => (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) / 2}px;
   padding: ${(props): number =>
       (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
       2}px
@@ -56,9 +59,7 @@ const Work = styled.li`
       (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
       2}px
     0;
-  width: calc(
-    100% + ${(props): number => props.theme.sizes.phone.dashboard - 18}px
-  );
+  width: 100%;
   ${(props): string => props.theme.mixins.lhCrop(2)}
   word-wrap: break-word;
   border-top: 1px solid #e5e5e5;

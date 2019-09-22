@@ -97,15 +97,7 @@ const Main = styled.div`
     props.theme.sizes.phone.dashboard +
     (props.theme.sizes.phone.dashboard - 30) / 2 +
     7}px;
-  padding-right: ${(props): number =>
-    (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
-    2}px;
-  padding-bottom: 0;
-  padding-left: ${(props): number =>
-    props.theme.sizes.phone.dashboard +
-    (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
-      2 +
-    1}px;
+  padding-left: ${(props): number => props.theme.sizes.phone.dashboard + 1}px;
   width: 100%;
   height: 100%;
   font-size: 14px;
@@ -120,7 +112,6 @@ const Footer = styled.div`
   margin-top: ${(props): number =>
     (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
     2}px;
-  margin-left: -${(props): number => (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) / 2}px;
   padding: ${(props): number =>
       (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
       2}px

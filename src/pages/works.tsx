@@ -45,6 +45,10 @@ const Works: React.FC<Props> = props => {
 }
 
 const P1 = styled.p`
+  padding: 0
+    ${(props): number =>
+      (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
+      2}px;
   ${(props): string => props.theme.mixins.lhCrop(2)}
 `
 const Work = styled.li`
@@ -56,16 +60,13 @@ const Work = styled.li`
   margin-top: ${(props): number =>
     (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
     2}px;
-  margin-left: -${(props): number => (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) / 2}px;
   padding-top: ${(props): number =>
     (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
     2}px;
   padding-left: ${(props): number =>
     (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
     2}px;
-  width: calc(
-    100% + ${(props): number => props.theme.sizes.phone.dashboard - 18}px
-  );
+  width: 100%;
   border-top: 1px solid #e5e5e5;
   ${(props): string => props.theme.mixins.lhCrop(2)}
 `
