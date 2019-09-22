@@ -18,7 +18,6 @@ const Twitter: React.FC = () => {
 
 const Root = styled.a`
   display: inline-block;
-  margin-top: 15px;
   padding: 10px;
   line-height: 1;
   border: 1px solid #e5e5e5;

@@ -2,7 +2,6 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import styled from '~/utils/emotion'
 import Layout from '~/layouts/default'
-import Image from '~/components/base/Image'
 import SEO from '~/components/base/Seo'
 import Twitter from '~/components/index/Twitter'
 
@@ -16,7 +15,9 @@ const IndexPage: React.FC = () => {
     <Layout>
       <SEO title="Home" />
       Designer & Developer 新田聡一郎の活動報告をしているサイトです。
-      <Twitter />
+      <TwitterWrapper>
+        <Twitter />
+      </TwitterWrapper>
       <VideoWrapper>
         <video
           ref={video}
@@ -27,39 +28,27 @@ const IndexPage: React.FC = () => {
           loop
         />
       </VideoWrapper>
-      <p>
-        lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-      <p>
-        あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
-        またそのなかでいっしょになったたくさんのひとたち、ファゼーロとロザーロ、羊飼のミーロや、顔の赤いこどもたち、地主のテーモ、山猫博士のボーガント・デストゥパーゴなど、いまこの暗い巨きな石の建物のなかで考えていると、みんなむかし風のなつかしい青い幻燈のように思われます。では、わたくしはいつかの小さなみだしをつけながら、しずかにあの年のイーハトーヴォの五月から十月までを書きつけましょう。
-      </p>
-      <ImageWrapper>
-        <Image />
-      </ImageWrapper>
-      <ImageWrapper>
-        <Image />
-      </ImageWrapper>
-      <ImageWrapper>
-        <Image />
-      </ImageWrapper>
-      <ImageWrapper>
-        <Image />
-      </ImageWrapper>
+      <Title>Soichiro Nitta</Title>
+      1994年生まれ・男。埼玉県在住・埼玉県出身。ウェブサイト、アプリケーション制作等。
+      「Nitta.Studio」は新田聡一郎が活動報告のために個人的に制作、管理しているホームページです。
+      <br />
+      <br />
+      iMac Pro 3.2 GHz Intel Xeon W<br />
+      Visual Studio Code <br />
+      <br />
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>
   )
 }
 
-const ImageWrapper = styled.div`
-  margin-top: 30px;
-  width: 150px;
+const TwitterWrapper = styled.div`
+  margin-top: 12px;
+`
+const Title = styled.div`
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+  margin-bottom: 10px;
 `
 const VideoWrapper = styled.div`
   margin: ${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px 0;
