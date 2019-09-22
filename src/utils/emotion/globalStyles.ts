@@ -60,6 +60,9 @@ const globalStyles = css`
   h3 {
     margin: 0;
   }
+  p {
+    margin: 0;
+  }
   a {
     color: inherit;
     text-decoration: none;

@@ -94,7 +94,7 @@ const Main = styled.div`
   padding-top: ${(props): number =>
     props.theme.sizes.phone.dashboard +
     (props.theme.sizes.phone.dashboard - 30) / 2 +
-    2}px;
+    7}px;
   padding-right: ${(props): number =>
     (props.theme.sizes.phone.dashboard - 18) / 2}px;
   padding-bottom: 0;
@@ -113,7 +113,16 @@ const Main = styled.div`
   z-index: 0;
 `
 const Footer = styled.div`
-  margin: 30px 0 19px;
+  margin-top: 30px;
+  margin-left: -${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px;
+  padding: 20px 0;
+  padding-left: ${(props): number =>
+    (props.theme.sizes.phone.dashboard - 18) / 2}px;
+  width: calc(
+    100% + ${(props): number => props.theme.sizes.phone.dashboard - 18}px
+  );
+  border-top: 1px solid #e5e5e5;
+  line-height: 1;
 `
 
 export default Layout

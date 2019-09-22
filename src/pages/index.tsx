@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 import styled from '~/utils/emotion'
 import Layout from '~/layouts/default'
 import SEO from '~/components/base/Seo'
@@ -14,7 +13,10 @@ const IndexPage: React.FC = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      Designer & Developer 新田聡一郎の活動報告をしているサイトです。
+      <P>
+        Designer & <a href="/test">Developer </a>
+        新田聡一郎の活動報告をしているサイトです。
+      </P>
       <TwitterWrapper>
         <Twitter />
       </TwitterWrapper>
@@ -28,27 +30,21 @@ const IndexPage: React.FC = () => {
           loop
         />
       </VideoWrapper>
-      <Title>Soichiro Nitta</Title>
-      1994年生まれ・男。埼玉県在住・埼玉県出身。ウェブサイト、アプリケーション制作等。
-      「Nitta.Studio」は新田聡一郎が活動報告のために個人的に制作、管理しているホームページです。
-      <br />
-      <br />
-      iMac Pro 3.2 GHz Intel Xeon W<br />
-      Visual Studio Code <br />
-      <br />
-      <Link to="/page-2/">Go to page 2</Link>
+      <P>
+        新田聡一郎（にった そういちろう）。
+        1994年生まれ・男。埼玉県在住・埼玉県出身。ウェブサイト、アプリケーション制作等。
+        「Nitta.Studio」は新田聡一郎が活動報告のために個人的に制作、管理しているホームページです。
+        <br />
+        <br />
+        マシン環境 iMac Pro 3.2 GHz Intel Xeon W<br />
+        Visual Studio Code ほか
+      </P>
     </Layout>
   )
 }
 
 const TwitterWrapper = styled.div`
   margin-top: 12px;
-`
-const Title = styled.div`
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 1;
-  margin-bottom: 10px;
 `
 const VideoWrapper = styled.div`
   margin: ${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px 0;
@@ -70,6 +66,9 @@ const VideoWrapper = styled.div`
     object-fit: cover;
     /* opacity: 0; */
   }
+`
+const P = styled.p`
+  ${(props): string => props.theme.mixins.lhCrop(2)}
 `
 
 export default IndexPage
