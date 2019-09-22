@@ -16,7 +16,7 @@ const Dashboard: React.FC = () => (
     <Icon to="/works">
       <FontAwesomeIcon icon={faCode} />
     </Icon>
-    <Icon to="/tweet">
+    <Icon to="/tweets">
       <FontAwesomeIcon icon={faFeatherAlt} />
     </Icon>
     <Icon to="/diary">

@@ -19,12 +19,12 @@ type Props = {
   }
 }
 
-const Tweet: React.FC<Props> = props => {
+const Tweets: React.FC<Props> = props => {
   return (
     <Layout>
-      <Seo title="Tweet" />
+      <Seo title="Tweets" />
       <P1>
-        <b>Tweet</b>
+        <b>Tweets</b>
       </P1>
       <ul>
         {props.data.allMarkdownRemark.edges.map(({ node }, index) => {
@@ -67,13 +67,13 @@ const Work = styled.li`
   }
 `
 
-export default Tweet
+export default Tweets
 
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { category: { eq: "tweet" } } }
+      filter: { frontmatter: { category: { eq: "tweets" } } }
     ) {
       edges {
         node {
