@@ -13,10 +13,10 @@ const IndexPage: React.FC = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <P>
-        Designer & <a href="/test">Developer </a>
+      <P1>
+        UI Designer & Software Engineer
         新田聡一郎の活動報告をしているサイトです。
-      </P>
+      </P1>
       <TwitterWrapper>
         <Twitter />
       </TwitterWrapper>
@@ -30,29 +30,38 @@ const IndexPage: React.FC = () => {
           loop
         />
       </VideoWrapper>
-      <P>
-        新田聡一郎（にった そういちろう）。
+      <P2>
+        <b>新田聡一郎（Soichiro Nitta）</b>
+        <br />
         1994年生まれ・男。埼玉県在住・埼玉県出身。ウェブサイト、アプリケーション制作等。
         「Nitta.Studio」は新田聡一郎が活動報告のために個人的に制作、管理しているホームページです。
+      </P2>
+      <P2>
+        マシン環境 iMac Pro 3.2 GHz
         <br />
-        <br />
-        マシン環境 iMac Pro 3.2 GHz Intel Xeon W<br />
         Visual Studio Code ほか
-      </P>
+      </P2>
     </Layout>
   )
 }
 
 const TwitterWrapper = styled.div`
-  margin-top: 12px;
+  margin-top: ${(props): number =>
+    (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
+    3}px;
 `
 const VideoWrapper = styled.div`
-  margin: ${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px 0;
-  margin-left: -${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px;
-  padding: ${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px
+  margin-top: ${(props): number =>
+    (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
+    2}px;
+  margin-left: -${(props): number => (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) / 2}px;
+  padding: ${(props): number =>
+      (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
+      2}px
     0;
   padding-right: ${(props): number =>
-    (props.theme.sizes.phone.dashboard - 18) / 2}px;
+    (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
+    2}px;
   width: calc(
     100% + ${(props): number => props.theme.sizes.phone.dashboard - 18}px
   );
@@ -67,8 +76,13 @@ const VideoWrapper = styled.div`
     /* opacity: 0; */
   }
 `
-const P = styled.p`
+const P1 = styled.p`
   ${(props): string => props.theme.mixins.lhCrop(2)}
+`
+const P2 = styled(P1)`
+  margin-top: ${(props): number =>
+    (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
+    2}px;
 `
 
 export default IndexPage

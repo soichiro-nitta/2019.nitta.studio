@@ -65,7 +65,9 @@ const DashboardWrapper = styled.div`
     props.theme.sizes.phone.dashboard +
     (props.theme.sizes.phone.dashboard - 30) / 2 +
     5}px;
-  left: ${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px;
+  left: ${(props): number =>
+    (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
+    2}px;
   z-index: 1;
 `
 const ScrollbarWrapper = styled.div`
@@ -96,11 +98,13 @@ const Main = styled.div`
     (props.theme.sizes.phone.dashboard - 30) / 2 +
     7}px;
   padding-right: ${(props): number =>
-    (props.theme.sizes.phone.dashboard - 18) / 2}px;
+    (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
+    2}px;
   padding-bottom: 0;
   padding-left: ${(props): number =>
     props.theme.sizes.phone.dashboard +
-    (props.theme.sizes.phone.dashboard - 18) / 2 +
+    (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
+      2 +
     1}px;
   width: 100%;
   height: 100%;
@@ -113,11 +117,17 @@ const Main = styled.div`
   z-index: 0;
 `
 const Footer = styled.div`
-  margin-top: 30px;
-  margin-left: -${(props): number => (props.theme.sizes.phone.dashboard - 18) / 2}px;
-  padding: 20px 0;
+  margin-top: ${(props): number =>
+    (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
+    2}px;
+  margin-left: -${(props): number => (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) / 2}px;
+  padding: ${(props): number =>
+      (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
+      2}px
+    0;
   padding-left: ${(props): number =>
-    (props.theme.sizes.phone.dashboard - 18) / 2}px;
+    (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
+    2}px;
   width: calc(
     100% + ${(props): number => props.theme.sizes.phone.dashboard - 18}px
   );
