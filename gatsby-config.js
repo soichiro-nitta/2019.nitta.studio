@@ -45,6 +45,20 @@ module.exports = {
         fonts: [`Spectral\:600,800`, `Noto Serif JP\:600,900`],
         display: 'swap'
       }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'noopener noreferrer'
+            }
+          }
+        ]
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
