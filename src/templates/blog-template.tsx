@@ -35,6 +35,7 @@ const Root = styled.div`
       (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
       2}px;
   word-wrap: break-word;
+  ${(props): string => props.theme.mixins.lhCrop(2)}
   p {
     margin-top: ${(props): number =>
       (props.theme.sizes.phone.dashboard - props.theme.sizes.phone.scrollbar) /
