@@ -59,6 +59,12 @@ module.exports = {
           }
         ]
       }
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: ['@weknow/gatsby-remark-twitter']
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
