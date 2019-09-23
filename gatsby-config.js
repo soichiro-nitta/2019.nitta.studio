@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-twitter`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -58,6 +59,12 @@ module.exports = {
             }
           }
         ]
+      }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-embedder`]
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
