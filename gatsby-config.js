@@ -64,7 +64,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [`gatsby-remark-embedder`]
+        plugins: [`@weknow/gatsby-remark-twitter`]
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
