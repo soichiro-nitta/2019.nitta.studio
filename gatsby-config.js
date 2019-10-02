@@ -57,14 +57,9 @@ module.exports = {
               target: '_blank',
               rel: 'noopener noreferrer'
             }
-          }
+          },
+          `@weknow/gatsby-remark-twitter`
         ]
-      }
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [`@weknow/gatsby-remark-twitter`]
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
