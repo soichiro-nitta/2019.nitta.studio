@@ -58,6 +58,7 @@ const HeaderWrapper = styled.div`
   top: ${(props): number => (props.theme.sizes.phone.dashboard - 30) / 2 + 3}px;
   left: ${(props): number => (props.theme.sizes.phone.dashboard - 22) / 2}px;
   z-index: 1;
+  mix-blend-mode: exclusion;
 `
 const DashboardWrapper = styled.div`
   position: fixed;
